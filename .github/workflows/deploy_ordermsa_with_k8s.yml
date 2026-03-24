@@ -51,7 +51,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2
 
 
-      # 변경된 폴더 감지
+      # 변경된 폴더 감지d
       - name: detect changed services
         id: changes
 
