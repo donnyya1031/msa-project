@@ -15,11 +15,15 @@ spec:
         prometheus.io/path: "/actuator/prometheus"
         prometheus.io/port: "8080"
       labels:
-        app: ordering
+        app: ordering 
     spec:
       containers:
       - name: ordering-container
+<<<<<<< HEAD:ordering/k8s/depl_svc.yml
         image: 973168821519.dkr.ecr.ap-northeast-2.amazonaws.com/order-service:latest
+=======
+        image: 683668078297.dkr.ecr.ap-northeast-2.amazonaws.com/t2-ordering-service:latest
+>>>>>>> d608e45 (msa + frontend):msa/ordering/k8s/depl_svc.yml
         ports:
         - containerPort: 8080
         resources:
@@ -53,7 +57,7 @@ spec:
           # 확인 반복 주기
           periodSeconds: 10
 
----
+--- 
 apiVersion: v1
 kind: Service
 metadata:
